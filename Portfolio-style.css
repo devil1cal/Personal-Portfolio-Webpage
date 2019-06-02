@@ -3,57 +3,206 @@
   padding: 0;
 
 }
-.box{
+.box{/*main boxes*/
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  border:1px solid red;
+  position: relative;
+  z-index: 0;
+}
+.mobile-navbar{
+  display: inline-flex;
+  background-color: #3CAEA3;
+  width: 100%;
+  height: auto;
+  min-width: 320px;
+  min-height: 50px;
+  max-width: 479px;
+  max-height: auto;
+  z-index: 1;
+  position: sticky;
+  align-items: center;
+
+}
+
+.mobile-navbar ul{
+list-style-type: none;
+margin: auto;
+
+}
+
+.mobile-navbar li{
+  display: inline-flex;
+  float: left;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+.mobile-navbar li a{
+  text-decoration: none;
+  color: #173f5f;
+}
+
+.destop-navbar{
+  display: none;
 }
 
 .firsttab{
-  height: 100%;
+  display: flex;
   width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 400px;
+  max-width: 479px;
+  max-height: auto;
   background-color: #3CAEA3;
 }
+.flex1{
+margin: auto;
+text-align: center;
+text-transform: capitalize;
+}
 
-.mobile-navbar{
+.secondtab{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 300px;
+  max-width: 479px;
+  max-height: auto;
+  background-color: #B3E5E0;
+
+}
+.project-section{
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+.project-pic{
   display: none;
 }
-.destop-navbar{
-  background-color: #3CAEA3;
-  border:1px solid red;
-  position:sticky;
+.thirdtab{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 300px;
+  max-width: 479px;
+  max-height: auto;
+  background-color: #1DCDBC;
+}
+
+.connect-sect{
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  line-height: 45px;
+  align-items: center;
+}
+.connect-pic{
+  width: 90px;
+  height: auto;
+}
+
+.footertab{
+  display: flex;
+  background-color: #20639b;
   width: 100%;
   height: auto;
-  float: left;
-  position:static;
+  min-width: 320px;
+  min-height: 75px;
+  max-width: 479px;
+  max-height: auto;
+  z-index: 0;
+  text-transform: capitalize;
 
 }
-.destop-navbar ul{
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 50%;
-
-}
-.destop-navbar li{
-display: inline-block;
-float: left;
-margin: 27.5px;
-padding-right:15px;
-}
-
-.flex1{
+.info-footer{
   display: flex;
-  position: relative;
-  min-width: 480px;
-  min-height: 55vh;
-  max-width: 1920px;
-  max-height: 1080px;
-  background-color: #3CAEA3;
-  padding-top: 45vh;
-
-  /*font*/
-  font-size:25px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 
 
-  border:1px solid yellow;
 }
+
+/* media guaries */
+@media only screen and (min-width: 320px) and (max-width: 479px){
+  ... }
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+   ... }
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  ... }
+
+@media only screen and (min-width: 992px){
+  ... }
+  /* my old code for example */
+/*
+  .box{
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;
+  }
+  /* navigation bars /
+  .mobile-navbar{
+    display: none;
+  }
+
+  .destop-navbar{
+    background-color: #3CAEA3;
+    border:1px solid red;
+    position:sticky;
+    width: 100%;
+    height: auto;
+    float: left;
+    position:static;
+
+  }
+  .destop-navbar ul{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 50%;
+
+  }
+  .destop-navbar li{
+  display: inline-block;
+  float: left;
+  margin: 27.5px;
+  padding-right:15px;
+  }
+
+  /*navigation bars */
+  /*first tab/
+
+  .firsttab{
+    height: 100%;
+    width: 100%;
+    background-color: #3CAEA3;
+  }
+
+  .flex1{
+    display: flex;
+    position: relative;
+    min-width: 480px;
+    min-height: 55vh;
+    max-width: 1920px;
+    max-height: 1080px;
+    background-color: #3CAEA3;
+    padding-top: 45vh;
+
+    /*font/
+    font-size:25px;
+    border:1px solid yellow;
+  } */
