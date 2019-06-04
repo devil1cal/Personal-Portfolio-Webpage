@@ -1,9 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-
 }
-.box{/*main boxes*/
+
+.box {
+  /*main boxes*/
   width: 100%;
   height: 100%;
   min-width: 320px;
@@ -12,9 +13,11 @@
   flex-direction: column;
   position: relative;
   z-index: 0;
+  font-weight: 400;
 }
-.mobile-navbar{
-  display: inline-flex;
+
+.mobile-navbar {
+  display: flex;
   background-color: #3CAEA3;
   width: 100%;
   height: auto;
@@ -23,33 +26,33 @@
   max-width: 479px;
   max-height: auto;
   z-index: 1;
-  position: sticky;
+  position: fixed;
   align-items: center;
-
+  font-size: 3vh;
 }
 
-.mobile-navbar ul{
-list-style-type: none;
-margin: auto;
-
+.mobile-navbar ul {
+  list-style-type: none;
+  margin: auto;
 }
 
-.mobile-navbar li{
+.mobile-navbar li {
   display: inline-flex;
   float: left;
   padding-right: 10px;
   text-transform: uppercase;
 }
-.mobile-navbar li a{
+
+.mobile-navbar li a {
   text-decoration: none;
   color: #173f5f;
 }
 
-.destop-navbar{
+.destop-navbar {
   display: none;
 }
 
-.firsttab{
+.firsttab {
   display: flex;
   width: 100%;
   height: 100%;
@@ -58,14 +61,16 @@ margin: auto;
   max-width: 479px;
   max-height: auto;
   background-color: #3CAEA3;
-}
-.flex1{
-margin: auto;
-text-align: center;
-text-transform: capitalize;
+  font-size: 5vh;
 }
 
-.secondtab{
+.flex1 {
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.secondtab {
   display: flex;
   width: 100%;
   height: 100%;
@@ -74,9 +79,15 @@ text-transform: capitalize;
   max-width: 479px;
   max-height: auto;
   background-color: #B3E5E0;
-
 }
-.project-section{
+
+.secondtab a{
+text-decoration:none;
+  color: #173f5f;
+}
+
+
+.project-section {
   margin: auto;
   text-align: center;
   text-transform: capitalize;
@@ -84,11 +95,20 @@ text-transform: capitalize;
   display: flex;
   flex-direction: column;
   line-height: 30px;
+  font-size: 3vh;
 }
-.project-pic{
+.project-section h2{
+  font-size: 4vh;
+  padding-bottom: 15px;
+}
+.project-pic {
   display: none;
 }
-.thirdtab{
+
+.info-sect{
+  font-size: 3vh;
+}
+.thirdtab {
   display: flex;
   width: 100%;
   height: 100%;
@@ -97,9 +117,10 @@ text-transform: capitalize;
   max-width: 479px;
   max-height: auto;
   background-color: #1DCDBC;
+  font-size: 4vh;
 }
 
-.connect-sect{
+.connect-sect {
   margin: auto;
   text-align: center;
   text-transform: capitalize;
@@ -108,12 +129,13 @@ text-transform: capitalize;
   line-height: 45px;
   align-items: center;
 }
-.connect-pic{
+
+.connect-pic {
   width: 90px;
   height: auto;
 }
 
-.footertab{
+.footertab {
   display: flex;
   background-color: #20639b;
   width: 100%;
@@ -124,31 +146,259 @@ text-transform: capitalize;
   max-height: auto;
   z-index: 0;
   text-transform: capitalize;
-
+    font-size: 3vh;
 }
-.info-footer{
+
+.info-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-
-
+  color: #3CAEA3;
 }
 
 /* media guaries */
-@media only screen and (min-width: 320px) and (max-width: 479px){
-  ... }
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  ...
+}
 
-@media only screen and (min-width: 480px) and (max-width: 767px){
-   ... }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .mobile-navbar {
 
-@media only screen and (min-width: 768px) and (max-width: 991px){
-  ... }
+    min-width: 480px;
+    min-height: 50px;
+    max-width: 767px;
+    max-height: auto;
+  }
 
-@media only screen and (min-width: 992px){
-  ... }
-  /* my old code for example */
+  .firsttab {
+    min-width: 480px;
+    min-height: 800px;
+    max-width: 767px;
+    max-height: auto;
+  }
+
+  .secondtab {
+    min-width: 480px;
+    min-height: 400px;
+    max-width: 767px;
+    max-height: auto;
+  }
+
+  .project-section {
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+  }
+
+  .project-pic {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-sect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin: 0;
+  }
+
+  .line-sec {
+    padding-right: 15px;
+  }
+
+  .text-wrap {
+    width: 75px;
+    height: 75px;
+  }
+
+  .thirdtab {
+    min-width: 480px;
+    min-height: 400px;
+    max-width: 767px;
+    max-height: auto;
+  }
+
+
+  .con-info-main {
+    flex-direction: row;
+  }
+
+  .footertab {
+    min-width: 480px;
+    min-height: 75px;
+    max-width: 767px;
+    max-height: auto;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .mobile-navbar {
+    min-width: 768px;
+    min-height: 50px;
+    max-width: 991px;
+    max-height: auto;
+  }
+  .mobile-navbar li {
+    display: inline-flex;
+    float: left;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  .firsttab {
+    min-width: 768px;
+    min-height: 800px;
+    max-width: 991px;
+    max-height: auto;
+  }
+
+  .secondtab {
+    min-width: 768px;
+    min-height: 500px;
+    max-width: 991px;
+    max-height: auto;
+  }
+
+  .project-section {
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+  }
+
+  .project-pic {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-sect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin: 0;
+  }
+
+  .line-sec {
+    padding-right: 15px;
+  }
+
+  .text-wrap {
+    width: 75px;
+    height: 75px;
+  }
+
+  .thirdtab {
+    min-width: 768px;
+    min-height: 400px;
+    max-width: 991px;
+    max-height: auto;
+  }
+
+
+  .con-info-main {
+    flex-direction: row;
+  }
+
+  .footertab {
+    min-width: 768px;
+    min-height: 75px;
+    max-width: 991px;
+    max-height: auto;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .mobile-navbar {
+
+    min-width: 992px;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .firsttab {
+    min-width: 992px;
+    min-height: 1000px;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .secondtab {
+    min-width: 992px;
+    min-height: 500px;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .project-section {
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+  }
+
+  .project-pic {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-sect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin: 0;
+  }
+
+  .line-sec {
+    padding-right: 15px;
+  }
+
+  .text-wrap {
+    width: 75px;
+    height: 75px;
+  }
+
+  .thirdtab {
+    min-width: 992px;
+    min-height: 400px;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+
+  .con-info-main {
+    flex-direction: row;
+  }
+
+  .footertab {
+  min-width: 992px;
+  min-height: 75px;
+  max-width: 100%;
+  max-height: auto;
+  }
+}
+
+/* my old code for example */
 /*
   .box{
     display: flex;
@@ -184,7 +434,7 @@ text-transform: capitalize;
   }
 
   /*navigation bars */
-  /*first tab/
+/*first tab/
 
   .firsttab{
     height: 100%;
